@@ -1,0 +1,129 @@
+@import url(../fonts/stylesheet.css);
+
+/*
+russo_oneregular
+*/
+
+/*==================o
+|		DOM			|
+o==================*/
+
+body {
+	font-family: 'russo_oneregular';
+	background-color: #280727;
+}
+
+a {
+}
+
+h3 {
+	font-size: 32px;
+}
+
+p {
+	font-size: 2em;
+	color: #fff;
+}
+
+
+/*==================o
+|		IDs			|
+o==================*/
+
+#container {
+	width: 600px;
+	margin: 100px auto 0;
+	text-align: center;
+}
+#transform-link:hover {
+	
+}
+/*======================o
+|		MY MY...		|
+o======================*/
+
+#mymy_container {
+	opacity: 0.26;
+	position: relative;
+	top: 35px;
+
+	animation: mymy_intro 6s ease;
+	animation: seasick 12s ease infinite;
+}
+/*======================o
+|		BREATHE...		|
+o======================*/
+
+#breathe {
+	font-size: 72px;
+	text-decoration: none;
+	color: #fff;
+	animation: wobble 3s ease infinite;
+}
+
+
+/*==========================o
+|		PROJECT LIST		|
+o==========================*/
+
+#project_list {
+
+}
+#project_list ul {list-style-type: none;}
+#project_list ul li {}
+
+/*======================o
+|		CLASSES			|
+o======================*/
+
+
+
+/*======================o
+|		KEYFRAMES		|
+o======================*/
+
+@keyframes wobble {
+	0% {
+		letter-spacing: 5px;
+		transform: rotate(3deg);
+	}
+	61% {
+		letter-spacing: 3px;
+		transform: rotate(-1deg);
+	}
+	100% {
+		letter-spacing: 5px;
+		transform: rotate(3deg);
+	}
+}
+
+@keyframes mymy_intro {
+	0% {opacity: 0;}
+	28% {opacity: 0.11;}
+	46% {opacity: 0.06;}
+	68% {opacity: 0.24;}
+	100% {opacity: 0.26;}
+}
+
+@keyframes seasick {
+	0% {
+		transform: rotateZ(6deg);
+		top: -18px;
+	}
+	25% {
+
+		top: 12px;
+	}
+	50% {
+		transform: rotateZ(-8deg);
+		top: -16px;
+}
+	75% {
+
+		top: 12px;
+	}
+	100% {
+		transform: rotateZ(6deg);
+		top: -18px;
+}
+}
