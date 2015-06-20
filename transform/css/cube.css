@@ -68,15 +68,15 @@ o==================*/
 	font-size: 50px;
 	font-family: 'russo_oneregular';
 	height: 100px;
-	width: 50px;
+	width: 14%;
 	background-color:	#c2a;
 }
-#show1 {left: 0px;}
-#show2 {left: 60px;}
-#show3 {left: 120px;}
-#show4 {left: 180px}
-#show5 {left: 240px;}
-#show6 {left: 300px;}
+#show1 {left: 0;}
+#show2 {left: 15%;}
+#show3 {left: 30%;}
+#show4 {left: 45%}
+#show5 {left: 60%;}
+#show6 {left: 75%;}
 
 
 
