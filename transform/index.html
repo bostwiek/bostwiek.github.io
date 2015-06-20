@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<input type="button" id="flip" value="flip" >
+	<input type="button" id="show1" class="cube_button" value="1" >
+	<input type="button" id="show2" class="cube_button" value="2" >
+	<input type="button" id="show3" class="cube_button" value="3" >
+	<input type="button" id="show4" class="cube_button" value="4" >
+	<input type="button" id="show5" class="cube_button" value="5" >
+	<input type="button" id="show6" class="cube_button" value="6" >
+
+
+	<div id="sq1" class="square">transform: perspective( 600px )<br> rotateY( 45deg );</div>
+	<div id="sq2" class="square">transform: perspective( 200px ) rotateX( 145deg ) rotateY( 45deg )</div>
+	<div id="sq3" class="square">transform: perspective( 300px ) rotateY(48deg) rotateX(32deg) rotateZ(47deg)</div>
+
+
+	<section class="container">
+	  <div id="card">
+	    <figure class="frontc">1</figure>
+	    <figure class="backc">2</figure>
+	  </div>
+	</section>
+
+	<section class="cube_container">
+	  <div id="cube">
+	    <figure class="front">1</figure>
+	    <figure class="back">2</figure>
+	    <figure class="right">3</figure>
+	    <figure class="left">4</figure>
+	    <figure class="top">5</figure>
+	    <figure class="bottom">6</figure>
+	  </div>
+	</section>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+</html>

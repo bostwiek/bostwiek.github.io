@@ -1,0 +1,181 @@
+body {
+	font-family: 'slackey';font-size: 22px;
+}
+
+/*======================o
+|		STUFF			|
+o======================*/
+#flip {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/*======================o
+|		SQUARES			|
+o======================*/
+.square {
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+#sq1 {
+	background-color: #f00;
+	transform: perspective( 600px )
+	rotateY( 45deg );
+}
+#sq2 {
+	background-color: #0f0;
+	transform: perspective( 200px )
+	rotateX( 185deg )
+	rotateY( 45deg )
+}
+#sq3 {
+	background-color: #00f;
+	transform: perspective( 300px )
+	rotateY(48deg)
+	rotateX(32deg)
+	rotateZ(47deg);
+
+}
+
+/*======================o
+|		CARD FLIP		|
+o======================*/
+
+.container { 
+	width: 200px;
+	height: 260px;
+
+	margin: 0 auto;
+	text-align: center;
+
+	position: relative;
+
+	perspective: 600px;
+	/*perspective is necessary to parent 3D*/
+}
+#card {
+	width: 100%;
+	height: 100%;
+	/* more or less so the transition happens 
+	entirely centered in the container */
+	position: absolute;
+	transform-style: preserve-3d;
+	/* Inheretly transfers transform-style from parents */
+	transition: transform 1s;
+}
+#card figure {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 164px;
+	/* this is a new one... */
+	backface-visibility: hidden;
+}
+#card .frontc {
+	background: red;
+}
+#card .backc {
+	background: blue;
+	transform: rotateY( 180deg );
+}
+#card.flipped {
+	transform: rotateY( 900deg );
+}
+
+/*==================o
+|		CUBE 		|
+o==================*/
+
+.cube_container {
+	margin: 300px auto;
+	width: 200px;
+	height: 200px;
+	position: relative;
+
+	perspective: 90px;
+}
+#cube {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	font-size: 120px;
+	text-align: center;
+	color: #fff;
+	
+	transform-style: preserve-3d;
+
+	transition: transform 1s;
+}
+#cube figure {
+	width: 196px;
+	height: 196px;
+	display: block;
+	position: absolute;
+	border: 2px solid black;
+}
+/* 6 sides */
+/* TRANSLATE Z: pushes sides out from center (all clustered together before */
+#cube .front { transform: rotateY(	0deg 	) translateZ( 100px ); background-color: rgba(100,100,0,0.5);}
+#cube .back { transform: rotateY(	180deg 	) translateZ( 100px ); background-color: rgba(0,100,100,0.5);}
+#cube .right { transform: rotateY(	90deg 	) translateZ( 100px ); background-color: rgba(0,0,100,0.5);}
+#cube .left { transform: rotateY(	-90deg 	) translateZ( 100px ); background-color: rgba(0,100,0,0.5);}
+#cube .top { transform: rotateX(	90deg 	) translateZ( 100px ); background-color: rgba(100,0,100,0.5);}
+#cube .bottom { transform: rotateX(	-90deg 	) translateZ( 100px ); background-color: rgba(100,100,100,0.5);}
+
+#cube {
+	transform:translateZ(-100px);
+	/* 	Fixes distorted text by
+		pressing object back 100px	*/
+}
+
+
+/* Use classes to call the cube rotation to a certain side */
+#cube.show-front  { transform: translateZ( -100px ) rotateY(    0deg ); }
+#cube.show-back   { transform: translateZ( -100px ) rotateX( -180deg ); }
+#cube.show-right  { transform: translateZ( -100px ) rotateY(  -90deg ); }
+#cube.show-left   { transform: translateZ( -100px ) rotateY(   90deg ); }
+#cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
+#cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
+
+
+/* ===== cube buttons ===== */
+.cube_button {
+	position: absolute;
+	bottom: 10px;
+}
+#show1 {left: 10px;}
+#show2 {left: 40px;}
+#show3 {left: 70px;}
+#show4 {left: 100px}
+#show5 {left: 130px;}
+#show6 {left: 160px;}
+
+
+
+
+
+
+
+
+
+
+/*======================o
+|		TRANSFORM		|
+o======================*/
+
+@keyframes XD {
+	0% {
+		rotateY( 34deg );
+	}
+	100% {
+		rotateY( 60deg );
+
+	}
+}
