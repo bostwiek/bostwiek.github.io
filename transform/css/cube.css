@@ -12,7 +12,7 @@ o==================*/
 	height: 200px;
 	position: relative;
 
-	perspective: 300px;
+	perspective: 100px;
 }
 #cube {
 	width: 100%;
