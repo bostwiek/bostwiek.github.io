@@ -65,6 +65,8 @@ o==================*/
 	bottom: 10px;
 	z-index: 100;
 
+	font-size: 50px;
+	font-family: 'russo_oneregular';
 	height: 100px;
 	width: 50px;
 	background-color:	#c2a;
