@@ -14,6 +14,7 @@ body {
 }
 
 a {
+	text-decoration: none;
 }
 
 h3 {
@@ -31,53 +32,109 @@ p {
 o==================*/
 
 #container {
-	width: 600px;
-	margin: 100px auto 0;
+	position: relative;
+	width: 100%;
+	min-width: 320px;
+	margin: 0 auto;
 	text-align: center;
 }
-#transform-link:hover {
-	
-}
-/*======================o
-|		MY MY...		|
-o======================*/
-
-#mymy_container {
-	opacity: 0.26;
-	position: relative;
-	top: 35px;
-
-	animation: mymy_intro 6s ease;
-	animation: seasick 12s ease infinite;
+#spongebob {
+	position: absolute;
+	top: -500px;
+	left: 5%;
 }
 /*======================o
 |		BREATHE...		|
 o======================*/
 
 #breathe {
+	position: absolute;
+	top: 50px;
+	left: 12%;
+
+	right: auto;
 	font-size: 72px;
 	text-decoration: none;
 	color: #fff;
-	animation: wobble 3s ease infinite;
 }
+/*======================o
+|		MY MY...		|
+o======================*/
+#mymy_container {
+	opacity: 0.26;
+	position: absolute;
+	top: 220px;
+	right: 5%;
 
+	color: #fff;
+}
+#my1 {color: #f99;}
+#my2 {}
+#my3 {}
+#internet {color: yellow;}
+/*==========================o
+|		TRANSFORM LINK		|
+o==========================*/
+
+#transform_link {
+
+}
 
 /*==========================o
 |		PROJECT LIST		|
 o==========================*/
 
+#project_list_container {
+	position: absolute;
+	top: 400px;
+	left: 9%;
+	right: auto;
+
+	min-height: 300px;
+	width: 80%;
+	padding: 1%;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 100px;
+	color: #fff;
+
+	transition: all 0.3s ease;
+}
 #project_list {
+	position: relative;
+	padding: 50px 0;
+}
+#project_text {
+	font-size: 40px;
+	margin: 0 0 10px;
+}
+#project_text span {
+	font-size: 22px;
 
 }
-#project_list ul {list-style-type: none;}
+#project_list ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
 #project_list ul li {}
 
 /*======================o
 |		CLASSES			|
 o======================*/
+.project_list_item {
+	padding: 10px 0;
+	color: #ccf;
+	letter-spacing: 4px;
+}
 
 
 
+.wobble {animation: wobble 3s ease infinite;}
+.seasick {animation: seasick 12s ease infinite;}
+.fade_inout {animation: mymy_intro 10s ease infinite;}
+.border_radius_dance {animation: border_radius_dance .66s ease infinite;}
+.list_item_idle {animation: list_item_idle 2s ease infinite;}
+.list_item_dance {animation: list_item_idle 0.5s ease infinite;}
 /*======================o
 |		KEYFRAMES		|
 o======================*/
@@ -97,33 +154,58 @@ o======================*/
 	}
 }
 
-@keyframes mymy_intro {
-	0% {opacity: 0;}
-	28% {opacity: 0.11;}
-	46% {opacity: 0.06;}
-	68% {opacity: 0.24;}
-	100% {opacity: 0.26;}
+@keyframes fade_inout {
+	0% {'opacity': '0';}
+	28% {'opacity': '0.11';}
+	46% {'opacity': '0.06';}
+	68% {'opacity': '0.24';}
+	100% {'opacity': '0.26';}
 }
 
 @keyframes seasick {
 	0% {
+		font-size: 23px;
 		transform: rotateZ(6deg);
-		top: -18px;
+		margin-top: -18px;
 	}
 	25% {
 
-		top: 12px;
+		margin-top: 12px;
 	}
 	50% {
+		font-size: 20px;
 		transform: rotateZ(-8deg);
-		top: -16px;
+		margin-top: -16px;
 }
 	75% {
 
-		top: 12px;
+		margin-top: 12px;
 	}
 	100% {
+		font-size: 23px;
 		transform: rotateZ(6deg);
-		top: -18px;
+		margin-top: -18px;
+	}
 }
+
+@keyframes border_radius_dance {
+	0% {border-radius: 100px;}
+	66% {border-radius: 110px;}
+	82% {border-radius: 150px;}
+	100% {border-radius: 100px;}
+}
+
+@keyframes list_item_idle {
+	0% {letter-spacing: 4px;}
+	50% {letter-spacing: 6px;}
+	100 {letter-spacing: 4px;}
+}
+
+@keyframes list_item_dance {
+	0% {letter-spacing: 4px;}
+	20% {letter-spacing: 4px;}
+	30% {letter-spacing: -1px;}
+
+	70% {letter-spacing: 14px;}
+	100% {letter-spacing: 4px;}
 }

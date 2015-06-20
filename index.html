@@ -8,24 +8,34 @@
 <body>
 	<div id="container">
 
-		<h1 id="breathe">breathe...</h1>
-		<p id="mymy_container">
+		<h1 id="breathe" class="wobble">breathe...</h1>
+		<div id="mymy_container" class="seasick">
 			<span id="my1">My my...</span>
 			<br>
-			<span id="my2">you've made it deep into the internet</span>
+			<span id="my2">you've made it deep into the <span id="internet">internet</span></span>
 			<br>
 			<span id="my3">havent you...</span>
-		</p>
+		</div>
 
-		<div id="project_list">
+		<div id="project_list_container">
+			<div id="project_list">
+				<span id="project_text">
+					Welcome!!!<br>
+					<span>here's cool stuff I've built...</span>
+				</span>
+				<ul>
+					<li><a class="project_list_item list_item_idle" href="transform/index.html">transform</a></li></li>
+					<li><a class="project_list_item list_item_idle" href="#">nothing</a></li></li>
+					<li><a class="project_list_item list_item_idle" href="#">these are just for show!!!</a></li></li>
+				</ul>
 
-			<ul>
-				<li><a id="transform-link" href="transform/index.html">transform</a></li>
-			</ul>
-
+			</div>
 		</div>
 
 	</div>
+
+	<div id="spongebob"><img src="images/spongebob.png"></div>
+
 	<script src="js/jquery.js"></script>
 	<script src="js/custom.js"></script>
 
