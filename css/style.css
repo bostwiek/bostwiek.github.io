@@ -117,15 +117,16 @@ o==========================*/
 	list-style-type: none;
 }
 #project_list ul li {}
-
-/*======================o
-|		CLASSES			|
-o======================*/
 .project_list_item {
+	font-size:25px;
 	padding: 10px 0;
 	color: #ccf;
 	letter-spacing: 4px;
 }
+
+/*======================o
+|		CLASSES			|
+o======================*/
 
 
 
@@ -164,7 +165,7 @@ o======================*/
 
 @keyframes seasick {
 	0% {
-		font-size: 23px;
+		font-size: 21px;
 		transform: rotateZ(6deg);
 		margin-top: -18px;
 	}
@@ -182,7 +183,7 @@ o======================*/
 		margin-top: 12px;
 	}
 	100% {
-		font-size: 23px;
+		font-size: 21px;
 		transform: rotateZ(6deg);
 		margin-top: -18px;
 	}
