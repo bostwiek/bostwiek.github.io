@@ -8,7 +8,9 @@ $(document).ready(function() {
 	var internet = $('#internet');
 	var spongebob = $('#spongebob');
 	var projectListContainer = $('#project_list_container');
-	var projectListItem = $('.project_list_item')
+	var projectListItem = $('.project_list_item');
+	var socialContainer = $('#social_container');
+	var socialIcon = $('.socialIcon');
 
 	var winWidth = $(window).height();
 	var winHeight = $(window).width();
@@ -45,6 +47,19 @@ $(document).ready(function() {
 	projectListItem.mouseout(function() {
 		$(this).addClass('list_item_idle')
 		$(this).removeClass('list_item_dance')
+	})
+
+	socialContainer.mouseover(function() {
+		socialIcon.css({
+			'height': '60px',
+			'width': '60px'
+		})
+	})
+	socialContainer.mouseout(function() {
+		socialIcon.css({
+			'height': '40px',
+			'width': '40px'
+		})
 	})
 
 	$(window).on("resize", function() {

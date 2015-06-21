@@ -161,7 +161,7 @@ o==========================*/
 #project_list_item_container {
 	position: absolute;
 	width: 100%;
-	bottom: 60px;
+	bottom: 20px;
 }
 #project_list ul {
 	padding: 0;
@@ -177,6 +177,46 @@ o==========================*/
 	padding: 10px 0;
 	color: #ccf;
 	letter-spacing: 4px;
+}
+
+/*==========================o
+|		SOCIAL ICONS		|	
+o==========================*/
+#social_container {
+	height: 60px;
+	margin: 20px auto 0;
+}
+.socialIcon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	opacity: 0.2;
+
+	transition: all 0.5s ease;
+}
+.socialIcon:hover {opacity: 0.8;}
+#socialTwitch {
+	background: url(../images/soc/twitch.png);
+	background-size: cover;
+}
+#socialYoutube {
+	background: url(../images/soc/youtube.png);
+	background-size: cover;
+}
+#socialTwitter {
+	background: url(../images/soc/twitter.png);
+	background-size: cover;
+}
+#socialSteam {
+	background: url(../images/soc/steam.png);
+	background-size: cover;
+}
+#socialSkype {
+	background: url(../images/soc/skype.png);
+	background-size: cover;
 }
 
 /*======================o
@@ -234,6 +274,14 @@ o======================*/
 	-moz-list_item_idle 0.5s ease infinite;
 	-webkit-list_item_idle 0.5s ease infinite;
 }
+.social_icon_idle {
+	animation: social_icon_idle 2s ease infinite;
+	-o-social_icon_idle 2s ease infinite;
+	-ms-social_icon_idle 2s ease infinite;
+	-moz-social_icon_idle 2s ease infinite;
+	-webkit-social_icon_idle 2s ease infinite;	
+}
+.social_icon_dance {}
 
 /*======================o
 |		KEYFRAMES		|
@@ -308,4 +356,10 @@ o======================*/
 
 	70% {letter-spacing: 14px;}
 	100% {letter-spacing: 4px;}
+}
+
+@keyframes social_icon_idle {
+	0% {margin: 0 0;}
+	50% {margin: 0 4px;}
+	100 {margin: 0 0;}
 }
