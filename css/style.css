@@ -45,6 +45,23 @@ o==================*/
 }
 
 /*======================o
+|		PIKMIN			|
+o======================*/
+
+#pikmin {
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	z-index: -10;
+}
+#image_pikmin {
+	background: url(../images/pikminisfun.png);
+	background-size: cover;
+	height: 500px;
+	width: 700px;
+}
+
+/*======================o
 |		BREATHE...		|
 o======================*/
 
