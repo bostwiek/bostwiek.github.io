@@ -84,6 +84,10 @@ o======================*/
 	opacity: 1;
 
 	transition: opacity: 1.5s ease;
+	-o-transition: opacity: 1.5s ease;
+	-ms-transition: opacity: 1.5s ease;
+	-moz-transition: opacity: 1.5s ease;
+	-webkit-transition: opacity: 1.5s ease;
 }
 
 /*======================o
@@ -183,6 +187,7 @@ o==========================*/
 |		SOCIAL ICONS		|	
 o==========================*/
 #social_container {
+	width: 400px;
 	height: 60px;
 	margin: 20px auto 0;
 }
@@ -196,6 +201,10 @@ o==========================*/
 	opacity: 0.2;
 
 	transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
 }
 .socialIcon:hover {opacity: 0.8;}
 #socialTwitch {
