@@ -43,6 +43,7 @@ o==================*/
 	top: -500px;
 	left: 5%;
 }
+
 /*======================o
 |		BREATHE...		|
 o======================*/
@@ -57,6 +58,7 @@ o======================*/
 	text-decoration: none;
 	color: #fff;
 }
+
 /*======================o
 |		MY MY...		|
 o======================*/
@@ -72,6 +74,7 @@ o======================*/
 #my2 {}
 #my3 {}
 #internet {color: yellow;}
+
 /*==========================o
 |		TRANSFORM LINK		|
 o==========================*/
@@ -136,6 +139,7 @@ o======================*/
 .border_radius_dance {animation: border_radius_dance .66s ease infinite;}
 .list_item_idle {animation: list_item_idle 2s ease infinite;}
 .list_item_dance {animation: list_item_idle 0.5s ease infinite;}
+
 /*======================o
 |		KEYFRAMES		|
 o======================*/
