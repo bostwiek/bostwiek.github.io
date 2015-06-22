@@ -1,0 +1,10 @@
+
+.slideshow {
+    position: relative;
+    z-index: -100;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
