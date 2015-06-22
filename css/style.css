@@ -161,6 +161,7 @@ o==========================*/
 }
 #project_text span {
 	font-size: 22px;
+	line-height: 10px;
 }
 #project_list_item_container {
 	position: absolute;

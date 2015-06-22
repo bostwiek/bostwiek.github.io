@@ -1,0 +1,381 @@
+/*===============================
+=			DOMjects			=
+===============================*/
+
+
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'helvetica';
+}
+
+h1 {
+	display: none;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	font-family: 'helvetica';
+}
+header {
+	background-color: #000;
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+nav {
+	z-index: 5;
+	background: #000;
+}
+nav ul li a {
+	display: block;
+	height: 40px;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'helvetica';
+
+	-moz-transition: color 0.4s ease;
+	-o-transition: color 0.4s ease;
+	-webkit-transition: color 0.4s ease;
+	-ms-transition: color 0.4s ease;
+	transition: color 0.4s ease;
+
+	-moz-transition: background-color 0.4s ease;
+	-o-transition: background-color 0.4s ease;
+	-webkit-transition: background-color 0.4s ease;
+	-ms-transition: background-color 0.4s ease;
+	transition: background-color 0.4s ease;
+}
+nav ul li a:hover {
+	background-color: #dedede;
+	color: #000;
+}
+footer {
+	height: 240px;
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+
+/*===============================
+=			CLASSES				=
+===============================*/
+
+
+.content_container {
+	background: #fff;
+	width: 80%;
+	min-height: 100px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.seperator {
+	width: 100%;
+	height: 100px;
+	background: url(../images/tiled_color.jpg) repeat;
+	background-attachment: fixed;
+}
+
+.nav_fixed {
+	position: fixed;
+	top: 0;
+}
+
+
+
+/*===============================
+=			   IDs				=
+===============================*/
+
+
+#menu_btn {
+	position: absolute;
+	background: url(../images/menu.png) no-repeat;
+	background-size: cover;
+}
+#content_body {}
+#bostwiek {
+	display: block;
+	text-align: center;
+	margin: auto;
+	padding: 100px;
+}
+#nav_footer {
+	width: 95%;
+	margin: 0 auto;
+}
+#nav_footer ul li {
+	display: inline;
+	list-style-type: none;
+}
+#nav_footer ul li a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+
+
+	-moz-transition: color 0.4s ease;
+	-o-transition: color 0.4s ease;
+	-webkit-transition: color 0.4s ease;
+	-ms-transition: color 0.4s ease;
+	transition: color 0.4s ease;
+
+	-moz-transition: background-color 0.4s ease;
+	-o-transition: background-color 0.4s ease;
+	-webkit-transition: background-color 0.4s ease;
+	-ms-transition: background-color 0.4s ease;
+	transition: background-color 0.4s ease;
+}
+#nav_footer ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+/*===============================
+=			SMALLEST			=
+===============================*/
+
+
+@media (max-width: 480px) {
+
+	/* ======= DOMjects ======= */
+
+	header {
+		position: fixed;
+		top: 0;
+	}
+	nav {
+		position: fixed;
+		top: 45px;
+		z-index: 5;
+		width: 100%;
+		float: right;
+		display: none;
+	}
+	nav ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	nav ul li {}
+	nav ul li a {
+		text-align: center;
+		vertical-align: middle;
+		line-height: 38px;
+		border-bottom: 1px solid #333;
+		border-top: 1px solid #666;
+	}
+
+	/* ======= IDs ======= */
+
+	#header-small {
+		display: block;
+		padding: 10px 0;
+		font-size: 22px;
+	}
+	#menu_btn {
+		height: 20px;
+		width: 20px;
+		top: 14px;
+		right: 20px;
+	}
+	#nav_footer ul {
+	}
+	#nav_footer ul li {
+		margin: 0;
+	}
+
+
+}
+
+/*===============================
+=			MEDIUM #1			=
+===============================*/
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+	/* ======= DOMjects ======= */
+
+	header {margin-bottom: 0;}
+	nav {
+		position: relative;
+		z-index: 5;
+		height: 60px;
+		width: 100%;
+		background: #000;
+	}
+	nav ul {
+		width: 85%;
+		margin: 0 auto; 
+		padding: 0;}
+	nav ul li {
+		margin: 0;
+		display: inline;
+
+	}
+	nav ul li a {
+		display: inline-block;
+		width: 15%;
+		padding: 10px 2%;
+		line-height: 40px;
+
+		text-align: center;
+		vertical-align: middle;
+		letter-spacing: 2px;
+	}
+
+	/* ======= IDs ======= */
+
+	#nav_container {
+		margin: 0 auto;
+	}
+	#nav_order_online {
+		padding: 14px 2% 6px;
+		line-height: 15px;
+	}
+
+	#header-medium-1 {
+		display: block;
+		padding: 20px 0;
+		font-size: 34px;
+	}
+	#menu_btn {
+		display: none;
+		height: 30px;
+		width: 30px;
+		top: 24px;
+		right: 30px;
+	}
+	#nav_footer ul li {
+		margin: 0 3.5%;
+	}
+
+}
+
+
+/*===============================
+=			MEDIUM #2			=
+===============================*/
+
+
+@media (min-width: 769px) and (max-width: 980px) {
+
+	/* ======= DOMjects ======= */
+
+	header {margin-bottom: 0;}
+	nav {
+		position: relative;
+		z-index: 5;
+		height: 60px;
+		width: 100%;
+		background: #000;
+	}
+	nav ul {
+		width: 85%;
+		margin: 0 auto; 
+		padding: 0;}
+	nav ul li {
+		margin: 0;
+		display: inline;
+
+	}
+	nav ul li a {
+		display: inline-block;
+		width: 15.5%;
+		padding: 10px 1.9%;
+		line-height: 40px;
+
+		text-align: center;
+		vertical-align: middle;
+		letter-spacing: 2px;
+	}
+
+	/* ======= IDs ======= */
+
+	#nav_container {
+		margin: 0 auto;
+	}
+	#nav_order_online {letter-spacing: 1px;}
+
+	#header-medium-2 {
+		display: block;
+		padding: 20px 0;
+		font-size: 34px;
+	}
+	#menu_btn {
+		display: none;
+		height: 30px;
+		width: 30px;
+		top: 24px;
+		right: 30px;
+	}
+	#nav_footer ul li {
+		margin: 0 3.5%;
+	}
+
+}
+
+/*===============================
+=			LARGEST				=
+===============================*/
+
+
+@media (min-width: 981px) {
+
+	/* ======= DOMjects ======= */
+
+	header {margin-bottom: 0;}
+	nav {
+		display: block;
+		position: relative;
+		z-index: 5;
+		height: 80px;
+		width: 100%;
+		background: #000;
+		margin-top: -16px;
+	}
+	nav ul {
+		width: 85%;
+		margin: 0 auto; 
+		padding: 0;}
+	nav ul li {
+		margin: 0 2%;
+		display: inline;
+
+	}
+	nav ul li a {
+		display: inline-block;
+		line-height: 55px;
+		width: 15.5%;
+		padding: 20px 0;
+
+		text-align: center;
+		vertical-align: middle;
+		letter-spacing: 3px;
+	}
+
+	/* ======= IDs ======= */
+
+	#header-large {
+		display: block;
+		padding: 30px 0;
+		font-size: 46px;
+	}
+	#nav_container {
+		margin: 0 auto;
+	}
+	#menu_btn {
+		display: none;
+		height: 50px;
+		width: 50px;
+		top: 30px;
+		right: 70px;
+	}
+	#nav_footer ul li {
+		margin: 0 3.5%;
+	}
+
+}
