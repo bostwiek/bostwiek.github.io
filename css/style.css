@@ -1,0 +1,375 @@
+@import url(../fonts/stylesheet.css);
+
+/*
+	russo_oneregular
+*/
+
+/*==================o
+|		DOM			|
+o==================*/
+
+body {
+	font-family: 'russo_oneregular';
+	background-color: #280727;
+	min-height: 350px;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h3 {
+	font-size: 32px;
+}
+
+p {
+	font-size: 2em;
+	color: #fff;
+}
+
+
+/*==================o
+|		IDs			|
+o==================*/
+
+#container {
+	/*
+	position: relative;
+	width: 100%;
+	min-width: 320px;
+	margin: 0 auto;
+	text-align: center;
+	*/
+}
+#spongebob {
+	position: absolute;
+	top: -500px;
+	left: 5%;
+}
+
+/*======================o
+|		PIKMIN			|
+o======================*/
+
+#pikmin {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+}
+#image_pikmin {
+	background: url(../images/pikminisfun.png);
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	opacity: 0.2;
+}
+
+/*======================o
+|		BREATHE...		|
+o======================*/
+
+#breathe {
+	position: absolute;
+	top: 50px;
+	left: 12%;
+
+	right: auto;
+	font-size: 72px;
+	text-decoration: none;
+	color: #fff;
+
+	opacity: 1;
+
+	transition: opacity: 1.5s ease;
+	-o-transition: opacity: 1.5s ease;
+	-ms-transition: opacity: 1.5s ease;
+	-moz-transition: opacity: 1.5s ease;
+	-webkit-transition: opacity: 1.5s ease;
+}
+
+/*======================o
+|		MY MY...		|
+o======================*/
+#mymy_container {
+	opacity: 0.26;
+	position: absolute;
+	top: 220px;
+	right: 5%;
+
+	color: #fff;
+}
+#my1 {text-align: left; color: #f99;}
+#my2 {text-align: center;}
+#my3 {text-align: right;}
+#internet {color: yellow;}
+
+/*==========================o
+|		TRANSFORM LINK		|
+o==========================*/
+
+#transform_link {
+
+}
+
+/*==========================o
+|		PROJECT LIST		|
+o==========================*/
+
+#project_list_container {
+	position: absolute;
+	bottom: 0;
+	right: auto;
+
+	height: 30%;
+	min-height: 300px;
+	width: 90%;
+	min-width: 320px;
+	margin: 2.5%;
+	padding: 2.5%;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 100px;
+
+	color: #fff;
+	text-align: center;
+
+	/*
+		transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+	*/
+}
+#project_list {
+	position: relative;
+	width: 100%;
+	height: 80%;
+	padding: 50px 0;
+}
+#project_text {
+	position: absolute;
+	top: 0;
+
+
+	display: block;
+	width: 100%;
+	font-size: 40px;
+	margin: 0 0 10px;
+}
+#project_text span {
+	font-size: 22px;
+	line-height: 10px;
+}
+#project_list_item_container {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+}
+#project_list ul {
+	padding: 0;
+	margin: 0px auto;
+	list-style-type: none;
+}
+#project_list ul li {
+	overflow: hidden;
+	word-wrap: break-word;
+}
+.project_list_item {
+	font-size:25px;
+	padding: 10px 0;
+	color: #ccf;
+	letter-spacing: 4px;
+}
+
+/*==========================o
+|		SOCIAL ICONS		|	
+o==========================*/
+#social_container {
+	width: 400px;
+	height: 60px;
+	margin: 20px auto 0;
+}
+.socialIcon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	opacity: 0.2;
+
+	transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+.socialIcon:hover {opacity: 0.8;}
+#socialTwitch {
+	background: url(../images/soc/twitch.png);
+	background-size: cover;
+}
+#socialYoutube {
+	background: url(../images/soc/youtube.png);
+	background-size: cover;
+}
+#socialTwitter {
+	background: url(../images/soc/twitter.png);
+	background-size: cover;
+}
+#socialSteam {
+	background: url(../images/soc/steam.png);
+	background-size: cover;
+}
+#socialSkype {
+	background: url(../images/soc/skype.png);
+	background-size: cover;
+}
+
+/*======================o
+|		CLASSES			|
+o======================*/
+
+.tac {text-align: center;}
+.tal {text-align: left;}
+.tar {text-align: right;}
+.m0a {margin: 0 auto;}
+
+/*======================o
+|	ANIMATION CLASSES	|
+o======================*/
+
+.wobble {
+	animation: wobble 3s ease infinite;
+	-o-animation: wobble 3s ease infinite;
+	-ms-animation: wobble 3s ease infinite;
+	-moz-animation: wobble 3s ease infinite;
+	-webkit-animation: wobble 3s ease infinite;
+}
+.seasick {
+	animation: seasick 12s ease infinite;
+	-o-seasick 12s ease infinite;
+	-ms-seasick 12s ease infinite;
+	-moz-seasick 12s ease infinite;
+	-webkit-seasick 12s ease infinite;
+}
+.fade_inout {
+	animation: mymy_intro 10s ease infinite;
+	-o-mymy_intro 10s ease infinite;
+	-ms-mymy_intro 10s ease infinite;
+	-moz-mymy_intro 10s ease infinite;
+	-webkit-mymy_intro 10s ease infinite;
+}
+.border_radius_dance {
+	animation: border_radius_dance .66s ease infinite;
+	-o-border_radius_dance .66s ease infinite;
+	-ms-border_radius_dance .66s ease infinite;
+	-moz-border_radius_dance .66s ease infinite;
+	-webkit-border_radius_dance .66s ease infinite;
+}
+.list_item_idle {
+	animation: list_item_idle 2s ease infinite;
+	-o-list_item_idle 2s ease infinite;
+	-ms-list_item_idle 2s ease infinite;
+	-moz-list_item_idle 2s ease infinite;
+	-webkit-list_item_idle 2s ease infinite;
+}
+.list_item_dance {
+	animation: list_item_idle 0.5s ease infinite;
+	-o-list_item_idle 0.5s ease infinite;
+	-ms-list_item_idle 0.5s ease infinite;
+	-moz-list_item_idle 0.5s ease infinite;
+	-webkit-list_item_idle 0.5s ease infinite;
+}
+.social_icon_idle {
+	animation: social_icon_idle 2s ease infinite;
+	-o-social_icon_idle 2s ease infinite;
+	-ms-social_icon_idle 2s ease infinite;
+	-moz-social_icon_idle 2s ease infinite;
+	-webkit-social_icon_idle 2s ease infinite;	
+}
+.social_icon_dance {}
+
+/*======================o
+|		KEYFRAMES		|
+o======================*/
+
+@keyframes wobble {
+	0% {
+		letter-spacing: 5px;
+		transform: rotate(3deg);
+	}
+	61% {
+		letter-spacing: 3px;
+		transform: rotate(-1deg);
+	}
+	100% {
+		letter-spacing: 5px;
+		transform: rotate(3deg);
+	}
+}
+
+@keyframes fade_inout {
+	0% {'opacity': '0';}
+	28% {'opacity': '0.11';}
+	46% {'opacity': '0.06';}
+	68% {'opacity': '0.24';}
+	100% {'opacity': '0.26';}
+}
+
+@keyframes seasick {
+	0% {
+		font-size: 21px;
+		transform: rotateZ(6deg);
+		margin-top: -18px;
+	}
+	25% {
+
+		margin-top: 12px;
+	}
+	50% {
+		font-size: 20px;
+		transform: rotateZ(-8deg);
+		margin-top: -16px;
+}
+	75% {
+
+		margin-top: 12px;
+	}
+	100% {
+		font-size: 21px;
+		transform: rotateZ(6deg);
+		margin-top: -18px;
+	}
+}
+
+@keyframes border_radius_dance {
+	0% {border-radius: 100px;}
+	66% {border-radius: 110px;}
+	82% {border-radius: 150px;}
+	100% {border-radius: 100px;}
+}
+
+@keyframes list_item_idle {
+	0% {letter-spacing: 4px;}
+	50% {letter-spacing: 6px;}
+	100 {letter-spacing: 4px;}
+}
+
+@keyframes list_item_dance {
+	0% {letter-spacing: 4px;}
+	20% {letter-spacing: 4px;}
+	30% {letter-spacing: -1px;}
+
+	70% {letter-spacing: 14px;}
+	100% {letter-spacing: 4px;}
+}
+
+@keyframes social_icon_idle {
+	0% {margin: 0 0;}
+	50% {margin: 0 4px;}
+	100 {margin: 0 0;}
+}

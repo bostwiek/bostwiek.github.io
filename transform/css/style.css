@@ -1,0 +1,82 @@
+@import url(../fonts/stylesheet.css);
+/*
+russo_oneregular
+*/
+
+body {
+	font-family: 'russo_oneregular';
+	background-color: #280727;
+	color: #fff;
+}
+a {
+	text-decoration: none;
+	font-size: 72px;
+	color: #fff;
+
+	transition: letter-spacing 0.5s ease;
+}
+a:hover{
+	letter-spacing: 5px;
+}
+h3 {
+	font-size: 32px;
+}
+p {
+	font-size: 18px;
+	color: #777;
+}
+/*======================o
+|		STUFF			|
+o======================*/
+#flip {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+/*======================o
+|		SQUARES			|
+o======================*/
+.square {
+	height: 200px;
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+#sq1 {
+	background-color: #f00;
+	transform: perspective( 600px )
+	rotateY( 45deg );
+}
+#sq2 {
+	background-color: #0f0;
+	transform: perspective( 200px )
+	rotateX( 185deg )
+	rotateY( 45deg )
+}
+#sq3 {
+	background-color: #00f;
+	transform: perspective( 300px )
+	rotateY(48deg)
+	rotateX(32deg)
+	rotateZ(47deg);
+
+}
+
+
+
+/*======================o
+|		TRANSFORM		|
+o======================*/
+
+@keyframes XD {
+	0% {
+		rotateY( 34deg );
+	}
+	100% {
+		rotateY( 60deg );
+
+	}
+}
