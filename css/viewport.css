@@ -12,4 +12,7 @@
 		margin: 3.5%;
 		padding: 2.5%;
 	}
+	.project_list_item {
+		font-size: 5px;
+	}
 }
