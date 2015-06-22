@@ -1,0 +1,114 @@
+body {
+	min-width: 360px;
+}
+
+.container {
+	width: 810px; height: 840px;
+	position: relative;
+
+	perspective: 1000px;
+}
+
+#carousel {
+	width: 100%; height: 100%;
+	position: absolute;
+	left: 30%;
+	top: 50%;
+
+	transform-style: preserve-3d;
+
+	transition: transform 1.5s ease;
+}
+
+#carousel figure {
+	display: block;
+	position: absolute;
+	width: 186px; height: 116px;
+	left: 10px; top: 10px;
+	border: 2px solid #000;
+}
+
+#btn1 { background-color: #f00;}
+#btn2 { background-color: #0f0;}
+#btn3 { background-color: #00f;}
+#btn4 { background-color: #ff0;}
+#btn5 { background-color: #f0f;}
+#btn6 { background-color: #0ff;}
+#btn7 { background-color: #f9f;}
+#btn8 { background-color: #02c;}
+#btn9 { background-color: #cf2;}
+#carousel figure:nth-child(1) {background-color: #f00; transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) {background-color: #0f0; transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) {background-color: #00f; transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) {background-color: #ff0; transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) {background-color: #f0f; transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) {background-color: #0ff; transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) {background-color: #f9f; transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) {background-color: #02c; transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) {background-color: #cf2; transform: rotateY(320deg) translateZ(288px);}
+
+
+#carousel.show-1  { transform:rotateY(    0deg ); }
+#carousel.show-2  { transform:rotateY(    -40deg ); }
+#carousel.show-3  { transform:rotateY(    -80deg ); }
+#carousel.show-4  { transform:rotateY(    -120deg ); }
+#carousel.show-5  { transform:rotateY(    -160deg ); }
+#carousel.show-6  { transform:rotateY(    -200deg ); }
+#carousel.show-7  { transform:rotateY(    -240deg ); }
+#carousel.show-8  { transform:rotateY(    -280deg ); }
+#carousel.show-9  { transform:rotateY(    -320deg ); }
+/*
+#carousel.show-front  { transform: translateZ(  -50px ) rotateY(    0deg ); }
+#carousel.show-back   { transform: translateZ(  -50px ) rotateX( -180deg ); }
+#carousel.show-right  { transform: translateZ( -150px ) rotateY(  -90deg ); }
+#carousel.show-left   { transform: translateZ( -150px ) rotateY(   90deg ); }
+#carousel.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
+#carousel.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
+*/
+
+
+
+
+#carousel_attr {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	height: 150px;
+	width: 50%;
+	background-color: rgba(0,0,0,0.3);
+}
+#submit {
+	position: absolute;
+	width: 130px;
+	bottom: 0; right: 0;
+}
+
+#btn_container {
+	position: fixed;
+	z-index: 100;
+	bottom: 0px;
+	height: 100px;
+	width: 100%;
+	min-width: 500px;
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+}
+#btn_container div {
+	display: block;
+	width: 10%;
+	height: 100px;
+	margin: 0 5px;
+	float: left;
+}
+#btn1 { background-color: #f00;}
+#btn2 { background-color: #0f0;}
+#btn3 { background-color: #00f;}
+#btn4 { background-color: #ff0;}
+#btn5 { background-color: #f0f;}
+#btn6 { background-color: #0ff;}
+#btn7 { background-color: #f9f;}
+#btn8 { background-color: #02c;}
+#btn9 { background-color: #cf2;}
