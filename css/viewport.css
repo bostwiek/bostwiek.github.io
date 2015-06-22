@@ -1,0 +1,18 @@
+@media (max-width: 600px) {
+
+	
+	#project_list_container {
+		bottom: 0;
+		right: auto;
+
+		height: 90%;
+		min-height: 300px;
+		width: 90%;
+		min-width: 320px;
+		margin: 3.5%;
+		padding: 2.5%;
+	}
+	.project_list_item {
+		font-size: 5px;
+	}
+}
