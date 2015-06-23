@@ -112,3 +112,11 @@ body {
 #btn7 { background-color: #f9f;}
 #btn8 { background-color: #02c;}
 #btn9 { background-color: #cf2;}
+
+@media (max-width: 550px) {
+
+	#btn_container {}
+	#btn_container div { width: 20%;}
+
+
+}
