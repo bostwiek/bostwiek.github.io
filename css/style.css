@@ -146,7 +146,7 @@ o==========================*/
 #project_list {
 	position: relative;
 	width: 100%;
-	height: 80%;
+	height: 78%;
 	padding: 50px 0;
 }
 #project_text {
@@ -322,7 +322,6 @@ o======================*/
 
 @keyframes seasick {
 	0% {
-		font-size: 21px;
 		transform: rotateZ(6deg);
 		margin-top: -18px;
 	}
@@ -331,7 +330,6 @@ o======================*/
 		margin-top: 12px;
 	}
 	50% {
-		font-size: 20px;
 		transform: rotateZ(-8deg);
 		margin-top: -16px;
 }
@@ -340,7 +338,6 @@ o======================*/
 		margin-top: 12px;
 	}
 	100% {
-		font-size: 21px;
 		transform: rotateZ(6deg);
 		margin-top: -18px;
 	}

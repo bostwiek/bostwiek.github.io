@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+/*======================o
+|		VARIABLES		|
+o======================*/
+
 	var mymy = $('#my1');
 
 	var mymyFull = $('#mymy_container');
@@ -18,6 +22,10 @@ $(document).ready(function() {
 	var winWidthToggle = 0;
 	var winHeightToggle = 0;
 
+/*==========================o
+|		FLOATING TEXT		|
+o==========================*/
+
 	mymy.click(function() {
 		$(this).text('REDRUM').delay(3200).slideUp(3500)
 		$(this).css({'color':'red'})
@@ -33,6 +41,11 @@ $(document).ready(function() {
 			'top': '-500px'
 		})
 	})
+
+/*==========================o
+|	PROJECT LIST CONTAINER	|
+o==========================*/
+
 	projectListContainer.mouseover(function() {
 		$(this).addClass('border_radius_dance')
 	})
@@ -62,9 +75,46 @@ $(document).ready(function() {
 		})
 	})
 
-	$(window).on("resize", function() {
-		if ($(this).width() <= 700) {
-			if (winWidthToggle == 0) {
+/*==========================o
+|		MOBILE CHECKER		|
+o==========================*/
+
+function mobile_detector(){
+     var mobile =(/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+     var userAgent = navigator.userAgent.toLowerCase();
+     if (mobile) {
+
+				winWidthToggle = 1;
+
+				breathe.toggle();
+				mymyFull.toggle();
+
+				projectListContainer.css({
+					'height' : '90%'
+				})
+
+				projectListItem.css({
+					'font-size' : '40px'
+				})
+
+     }
+}
+mobile_detector();
+
+/*==============================o
+|		VIEWPORT CHECKER		|
+|			(ON LOAD)			|
+o==============================*/
+	
+	// width button
+	// comment this out after..
+	/*
+	$('#width_button').click(function() {
+		alert($(window).width())
+	})
+	*/
+	if ($(window).width() <= 700) {
+
 				winWidthToggle = 1;
 
 				breathe.fadeToggle("slow");
@@ -72,8 +122,43 @@ $(document).ready(function() {
 
 				projectListContainer.delay(1000).animate({
 					'height' : '90%'
-
 				}, 1500)
+
+				projectListItem.delay(1000).animate({
+					'font-size' : '40px'
+				}, 1500)
+	}
+
+/*==========================o
+|		RESIZE LISTENER		|
+o==========================*/
+
+	$(window).on("resize", function() {
+
+		//If queued up more than 1 action, 
+		//return without adding anything else
+
+		if ($('div').queue().length >= 1) {
+			return;
+		}
+
+		if ($(this).width() <= 700) {
+			if (winWidthToggle == 0) {
+
+				winWidthToggle = 1;
+
+				breathe.fadeToggle("slow");
+				mymyFull.fadeToggle("slow");
+
+				projectListContainer.delay(1000).animate({
+					'height' : '90%'
+				}, 1500)
+
+				projectListItem.delay(1000).animate({
+					'font-size' : '40px'
+				}, 1500)
+
+
 			}
 		}
 		if ($(this).width() > 700) {
@@ -85,18 +170,13 @@ $(document).ready(function() {
 
 				projectListContainer.animate({
 					'height' : '30%'
-
+				}, 1500)
+				projectListItem.delay().animate({
+					'font-size' : '25px'
 				}, 1500)
 			}
 		}
  	})
 
-
-	//when resizing window
-
-		//check if window is < 500px
-
-			//if yes, breathe + mymy fadeOut
-
-
+ 	//end logic
 })
