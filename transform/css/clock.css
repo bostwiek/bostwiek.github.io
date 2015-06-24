@@ -5,39 +5,45 @@ body {
   background: #333;
   padding: 70px 0;
   font: 15px/20px Arial, sans-serif;
-  min-height: 600px;
-  width: 1036px;
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 /*===================o
 |     Container      |
 o===================*/
 
+#clock_container {
+  position: absolute;
+  top: 240px;
+
+  width: 80%;
+  min-width: 1050px;
+}
+
 #seconds_container {
   width: 340px;
-  float: right;
+  float: left;
 }
 #minutes_container {
   width: 340px;
-  margin: 0 auto;
+  float: left;
 }
 #hours_container {
   width: 340px;
   float: left;
 }
 .vertS {
-  width: 160px;
+  width: 170px;
   height: 100px;
   position: relative;
-  top: 200px;
   float: left;
   perspective: 1000px;
 }
 .vertSS {
-  width: 160px;
+  width: 170px;
   height: 100px;
   position: relative;
-  top: 200px;
   float: left;
   perspective: 2000px;
 }
@@ -45,7 +51,13 @@ o===================*/
 /*===================o
 |       Wheels       |
 o===================*/
-
+.three {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
 .six {
   height: 100%;
   width: 100%;
@@ -121,6 +133,7 @@ o===================*/
 /*===================o
 |      10-Sides      |
 o===================*/
+
 .g {
   transform: rotateX(0deg) translateZ(150px);
   background: #ed1c24;
@@ -163,9 +176,26 @@ o===================*/
 }
 
 /*===================o
-|      BUTTONS!      |
+|       3-Sides      |
 o===================*/
 
+.q {
+  transform: rotateX(0deg) translateZ(50px);
+  background: #ed1c24;
+}
+.r {
+  transform: rotateX(120deg) translateZ(50px);
+  background: #0072bc;
+}
+.s {
+  transform: rotateX(240deg) translateZ(50px);
+  background: #39b54a;
+}
+
+/*===================o
+|      BUTTONS!      |
+o===================*/
+/*
 .next, .prev {
   color: #444;
   position: fixed;
@@ -188,3 +218,4 @@ o===================*/
 .next { right: 0; }
 .prev { left: 0; }
 
+*/

@@ -18,14 +18,7 @@ var six = $(".six"),
 	degreesM = 0,
     degreesMM  = 0,
 	degreesS = 0,
-    degreesSS  = 0,
-
-    hoursCounter = 0,
-    hourCounter = 0,
-    minutesCounter = 0,
-    minuteCounter = 0,
-    secondsCounter = 0,
-    secondCounter = 0;
+    degreesSS  = 0;
 
 
 /*========================o
@@ -59,6 +52,18 @@ var cH = xfullTime[0],
 	cS = xfullTime[4],
 	cSS = xfullTime[5];
 
+
+/*
+USED FOR TESTING TIME ROLLOVERS
+var cH = "1",
+	cHH = "9",
+	cM = "5",
+	cMM = "9",
+	cS = "5",
+	cSS = "7";
+*/
+
+
 //alert(cH+""+cHH+""+cM+""+cMM+""+cS+""+cSS)
 
 
@@ -73,7 +78,7 @@ function rotateCurrentTime() {
 	//=====//
 
 	if(cH != 0) {
-		var cHR = cH * -60;
+		var cHR = cH * -120;
 		h.css({
 			"-webkit-transform": "rotateX("+cHR+"deg)",
 			"-moz-transform": "rotateX("+cHR+"deg)",
@@ -141,30 +146,233 @@ function rotateCurrentTime() {
 
 //declare rotated variables to 
 //save memory when addSecond is called
+/*
+	cH = xfullTime[0],
+	cHH = xfullTime[1],
+	cM = xfullTime[2],
+	cMM = xfullTime[3],
+	cS = xfullTime[4],
+	cSS = xfullTime[5];
+*/
+var cHR = cH * -120,
+	cHHR = cHH * -36,
+	cMR = cM * -60,
+	cMMR = cMM * -36,
+	cSR = cS * -60,
+	cSSR = cSS * -36,
+
+    hCounter = Number(cH),
+    hhCounter = Number(cHH),
+    mCounter = Number(cM),
+    mmCounter = Number(cMM),
+    sCounter = Number(cS),
+    ssCounter = Number(cSS);
+
+
 
 function addSecond() {
-	//going to trigger this function every second
-	//need to check if anything makes a full rotation 
-	//due to time being dynamically called -_-
+
+	/*==============o
+	|	00:00:0X	|
+	o==============*/
+	cSSR = cSSR - 36;
+
 	ss.css({
-		"-webkit-transform": "rotateX("+degSS+"deg)",
-		"-moz-transform": "rotateX("+degSS+"deg)",
-		"-o-transform": "rotateX("+degSS+"deg)",
-		"transform": "rotateX("+degSS+"deg)"
+		"-webkit-transform": "rotateX("+cSSR+"deg)",
+		"-moz-transform": "rotateX("+cSSR+"deg)",
+		"-o-transform": "rotateX("+cSSR+"deg)",
+		"transform": "rotateX("+cSSR+"deg)"
 	})
 
+	ssCounter = ssCounter+1;
+
+	if (ssCounter == 10) {
+
+		/*==============o
+		|	00:00:X0	|
+		o==============*/
+
+		cSR = cSR - 60;
+		
+		s.css({
+			"-webkit-transform": "rotateX("+cSR+"deg)",
+			"-moz-transform": "rotateX("+cSR+"deg)",
+			"-o-transform": "rotateX("+cSR+"deg)",
+			"transform": "rotateX("+cSR+"deg)"
+		})
+
+		ssCounter = 0;
+		sCounter = sCounter + 1
+
+		if (sCounter == 6) {
+
+
+			/*==============o
+			|	00:0X:00	|
+			o==============*/
+
+			cMMR = cMMR - 36;
+			
+			mm.css({
+				"-webkit-transform": "rotateX("+cMMR+"deg)",
+				"-moz-transform": "rotateX("+cMMR+"deg)",
+				"-o-transform": "rotateX("+cMMR+"deg)",
+				"transform": "rotateX("+cMMR+"deg)"
+			})
+
+			sCounter = 0;
+			mmCounter = mmCounter + 1
+
+			if (mmCounter == 10) {
+
+				/*==============o
+				|	00:X0:00	|
+				o==============*/
+
+				cMR = cMR - 60;
+				
+				m.css({
+					"-webkit-transform": "rotateX("+cMR+"deg)",
+					"-moz-transform": "rotateX("+cMR+"deg)",
+					"-o-transform": "rotateX("+cMR+"deg)",
+					"transform": "rotateX("+cMR+"deg)"
+				})
+
+				mmCounter = 0;
+				mCounter = mCounter + 1
+
+				if (mCounter == 6) {
+
+					/*==============o
+					|	0X:00:00	|
+					o==============*/
+
+					cHHR = cHHR - 36;
+					
+					hh.css({
+						"-webkit-transform": "rotateX("+cHHR+"deg)",
+						"-moz-transform": "rotateX("+cHHR+"deg)",
+						"-o-transform": "rotateX("+cHHR+"deg)",
+						"transform": "rotateX("+cHHR+"deg)"
+					})
+
+					mCounter = 0;
+					hhCounter = hhCounter + 1
+
+					if (hhCounter == 10) {
+
+						/*==============o
+						|	X0:00:00	|
+						o==============*/
+
+						cHR = cHR - 120;
+						
+						h.css({
+							"-webkit-transform": "rotateX("+cHR+"deg)",
+							"-moz-transform": "rotateX("+cHR+"deg)",
+							"-o-transform": "rotateX("+cHR+"deg)",
+							"transform": "rotateX("+cHR+"deg)"
+						})
+
+						hCounter = hCounter + 1
+					//end h
+					}
+
+					if (hhCounter == 4 && hCounter == 2) {
+						// if 24:00:00, set everything to 00:00:00	
+							hCounter = 0;
+							hhCounter = 0;
+							mCounter = 0;
+							mmCounter = 0;
+							sCounter = 0;
+							ssCounter = 0;
+
+							cHR = 0;
+							cHHR = 0;
+							cMR = 0;
+							cMMR = 0;
+							cSR = 0;
+							cSSR = 0;
+
+							h.css({
+								"-webkit-transform": "rotateX("+cHR+"deg)",
+								"-moz-transform": "rotateX("+cHR+"deg)",
+								"-o-transform": "rotateX("+cHR+"deg)",
+								"transform": "rotateX("+cHR+"deg)"
+							})
+							hh.css({
+								"-webkit-transform": "rotateX("+cHHR+"deg)",
+								"-moz-transform": "rotateX("+cHHR+"deg)",
+								"-o-transform": "rotateX("+cHHR+"deg)",
+								"transform": "rotateX("+cHHR+"deg)"
+							})
+							m.css({
+								"-webkit-transform": "rotateX("+cMR+"deg)",
+								"-moz-transform": "rotateX("+cMR+"deg)",
+								"-o-transform": "rotateX("+cMR+"deg)",
+								"transform": "rotateX("+cMR+"deg)"
+							})
+							mm.css({
+								"-webkit-transform": "rotateX("+cMMR+"deg)",
+								"-moz-transform": "rotateX("+cMMR+"deg)",
+								"-o-transform": "rotateX("+cMMR+"deg)",
+								"transform": "rotateX("+cMMR+"deg)"
+							})
+							s.css({
+								"-webkit-transform": "rotateX("+cSR+"deg)",
+								"-moz-transform": "rotateX("+cSR+"deg)",
+								"-o-transform": "rotateX("+cSR+"deg)",
+								"transform": "rotateX("+cSR+"deg)"
+							})							
+							ss.css({
+								"-webkit-transform": "rotateX("+cSSR+"deg)",
+								"-moz-transform": "rotateX("+cSSR+"deg)",
+								"-o-transform": "rotateX("+cSSR+"deg)",
+								"transform": "rotateX("+cSSR+"deg)"
+							})
+
+						//end day
+					}
+
+				//end hh
+				}
+
+			//end m
+			}
+
+		//end mm
+		}
+
+	//end s
+	}
+
+//end ss
 }
 
+rotateCurrentTime();
+
+setInterval(addSecond, 1000);
 
 
 
 
 
-/*===================o
-|      Buttons       |
-o===================*/
 
 
+
+
+
+
+
+
+
+/*==================o
+|      Buttons      |
+| going to get rid 	|
+|	of these later 	|
+o==================*/
+
+/*
 $(".next").on("click", rotateN);
 $(".prev").on("click", rotateP);
 $(".all").on("click", rotateAll);
@@ -265,11 +473,8 @@ function rotateAll(){
 	})
 }
 
+*/
 
 
-
-rotateCurrentTime();
-
-setInterval(addSecond, 1000);
 
 })
