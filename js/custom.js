@@ -6,21 +6,21 @@ o======================*/
 
 	var mymy = $('#my1');
 
-	var mymyFull = $('#mymy_container');
-	var breathe = $('#breathe');
+		mymyFull = $('#mymy_container'),
+		breathe = $('#breathe'),
 
-	var internet = $('#internet');
-	var spongebob = $('#spongebob');
-	var projectListContainer = $('#project_list_container');
-	var projectListItem = $('.project_list_item');
-	var socialContainer = $('#social_container');
-	var socialIcon = $('.socialIcon');
+		internet = $('#internet'),
+		spongebob = $('#spongebob'),
+		projectListContainer = $('#project_list_container'),
+		projectListItem = $('.project_list_item'),
+		socialContainer = $('#social_container'),
+		socialIcon = $('.socialIcon'),
 
-	var winWidth = $(window).height();
-	var winHeight = $(window).width();
+		winWidth = $(window).height(),
+		winHeight = $(window).width(),
 
-	var winWidthToggle = 0;
-	var winHeightToggle = 0;
+		winWidthToggle = 0,
+		winHeightToggle = 0;
 
 /*==========================o
 |		FLOATING TEXT		|
@@ -86,16 +86,21 @@ function mobile_detector(){
 
 				winWidthToggle = 1;
 
-				breathe.toggle();
-				mymyFull.toggle();
+				breathe.remove();
+				mymyFull.remove();
 
 				projectListContainer.css({
-					'height' : '90%'
+					'height' : '90%',
+					'width' : '80%',
+					'margin' : '2.5% 0',
+					'padding' : '2.5% 0'
 				})
 
 				projectListItem.css({
-					'font-size' : '40px'
+					'font-size' : '30px'
 				})
+
+
 
      }
 }
@@ -125,7 +130,7 @@ o==============================*/
 				}, 1500)
 
 				projectListItem.delay(1000).animate({
-					'font-size' : '40px'
+					'font-size' : '30px'
 				}, 1500)
 	}
 
