@@ -52,18 +52,14 @@ var cH = xfullTime[0],
 	cS = xfullTime[4],
 	cSS = xfullTime[5];
 
-
 /*
-USED FOR TESTING TIME ROLLOVERS
-var cH = "1",
-	cHH = "9",
+var cH = "2",
+	cHH = "3",
 	cM = "5",
 	cMM = "9",
 	cS = "5",
 	cSS = "7";
 */
-
-
 //alert(cH+""+cHH+""+cM+""+cMM+""+cS+""+cSS)
 
 
@@ -78,7 +74,7 @@ function rotateCurrentTime() {
 	//=====//
 
 	if(cH != 0) {
-		var cHR = cH * -120;
+		var cHR = cH * -480;
 		h.css({
 			"-webkit-transform": "rotateX("+cHR+"deg)",
 			"-moz-transform": "rotateX("+cHR+"deg)",
@@ -154,7 +150,7 @@ function rotateCurrentTime() {
 	cS = xfullTime[4],
 	cSS = xfullTime[5];
 */
-var cHR = cH * -120,
+var cHR = cH * -480,
 	cHHR = cHH * -36,
 	cMR = cM * -60,
 	cMMR = cMM * -36,
@@ -265,7 +261,7 @@ function addSecond() {
 						|	X0:00:00	|
 						o==============*/
 
-						cHR = cHR - 120;
+						cHR = cHR - 480;
 						
 						h.css({
 							"-webkit-transform": "rotateX("+cHR+"deg)",

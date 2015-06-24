@@ -160,19 +160,19 @@ o===================*/
 }
 .m {
   transform: rotateX(216deg) translateZ(150px);
-  background: #8c6239;
+  background: #30D7D0;
 }
 .n {
   transform: rotateX(252deg) translateZ(150px);
-  background: #8c6239;
+  background: #EAB7EC;
 }
 .o {
   transform: rotateX(288deg) translateZ(150px);
-  background: #8c6239;
+  background: #FFE800;
 }
 .p {
   transform: rotateX(324deg) translateZ(150px);
-  background: #8c6239;
+  background: #000;
 }
 
 /*===================o
@@ -180,15 +180,15 @@ o===================*/
 o===================*/
 
 .q {
-  transform: rotateX(0deg) translateZ(50px);
+  transform: rotateX(0deg) translateZ(30px);
   background: #ed1c24;
 }
 .r {
-  transform: rotateX(120deg) translateZ(50px);
+  transform: rotateX(120deg) translateZ(30px);
   background: #0072bc;
 }
 .s {
-  transform: rotateX(240deg) translateZ(50px);
+  transform: rotateX(240deg) translateZ(30px);
   background: #39b54a;
 }
 
