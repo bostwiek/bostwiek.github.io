@@ -5,8 +5,8 @@ body {
   background: #333;
   padding: 70px 0;
   font: 15px/20px Arial, sans-serif;
-  min-height: 800px;
-  min-width: 800px;
+  min-height: 600px;
+  width: 1036px;
   position: relative;
 }
 /*===================o
@@ -14,15 +14,19 @@ body {
 o===================*/
 
 #seconds_container {
-  width: 500px;
-  margin: 0 auto;
+  width: 340px;
+  float: right;
 }
 #minutes_container {
-  width: 500px;
+  width: 340px;
   margin: 0 auto;
 }
+#hours_container {
+  width: 340px;
+  float: left;
+}
 .vertS {
-  width: 250px;
+  width: 160px;
   height: 100px;
   position: relative;
   top: 200px;
@@ -30,7 +34,7 @@ o===================*/
   perspective: 1000px;
 }
 .vertSS {
-  width: 250px;
+  width: 160px;
   height: 100px;
   position: relative;
   top: 200px;
@@ -166,7 +170,7 @@ o===================*/
   color: #444;
   position: fixed;
   bottom: 0;
-  padding: 2em 2em;
+  padding: 1em 1em;
   cursor: pointer;
   background: #CCC;
   border-radius: 5px;
