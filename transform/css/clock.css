@@ -26,10 +26,10 @@ o===================*/
   float: left;
   perspective: 1000px;
 }
-.vertT {
+.vertSS {
   margin: 0 auto;
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   position: relative;
   top: 200px;
   float: left;
@@ -56,7 +56,20 @@ o===================*/
   transition: transform 1s;
 }
 
-.shape{
+.shapeS {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 6em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+.shapeSS {
   display: block;
   position: absolute;
   background: #000;
@@ -103,43 +116,43 @@ o===================*/
 |      10-Sides      |
 o===================*/
 .g {
-  transform: rotateX(0deg) translateZ(400px);
+  transform: rotateX(0deg) translateZ(320px);
   background: #ed1c24;
 }
 .h {
-  transform: rotateX(36deg) translateZ(400px);
+  transform: rotateX(36deg) translateZ(320px);
   background: #0072bc;
 }
 .i {
-  transform: rotateX(72deg) translateZ(400px);
+  transform: rotateX(72deg) translateZ(320px);
   background: #39b54a;
 }
 .j {
-  transform: rotateX(108deg) translateZ(400px);
+  transform: rotateX(108deg) translateZ(320px);
   background: #f26522;
 }
 .k {
-  transform: rotateX(144deg) translateZ(400px);
+  transform: rotateX(144deg) translateZ(320px);
   background: #630460;
 } 
 .l {
-  transform: rotateX(180deg) translateZ(400px);
+  transform: rotateX(180deg) translateZ(320px);
   background: #8c6239;
 }
 .m {
-  transform: rotateX(216deg) translateZ(400px);
+  transform: rotateX(216deg) translateZ(320px);
   background: #8c6239;
 }
 .n {
-  transform: rotateX(252deg) translateZ(400px);
+  transform: rotateX(252deg) translateZ(320px);
   background: #8c6239;
 }
 .o {
-  transform: rotateX(288deg) translateZ(400px);
+  transform: rotateX(288deg) translateZ(320px);
   background: #8c6239;
 }
 .p {
-  transform: rotateX(324deg) translateZ(400px);
+  transform: rotateX(324deg) translateZ(320px);
   background: #8c6239;
 }
 
