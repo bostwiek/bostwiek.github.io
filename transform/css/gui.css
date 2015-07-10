@@ -1,0 +1,86 @@
+/*============o
+|	 FONTS    |
+o============*/
+/*
+@import url(../fonts/stylesheet.css);
+*/
+
+/*==============o
+|	 DOMJECTS	|
+o==============*/
+
+body {padding: 0; margin: 0;}
+
+/*==============o
+|	 CLASSES	|
+o==============*/
+
+.container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	min-height: 800px;
+	min-width: 1500px;
+
+  	perspective: 1000px;
+}
+.canvas {
+	height: 800; width: 1500px;
+	position: absolute;
+
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+.shape {
+	display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 6em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+
+/*=======o
+| 	ID   |
+o=======*/
+
+#shape1 {background: #ff0000;	left: 200px; 	top: 200px;}
+#shape2 {background: #ff6f00;	left: 200px; 	top: 200px;}
+#shape3 {background: #ff00ff;	left: 200px;	top: 200px;}
+#shape4 {background: #006fff;	left: 200px;	top: 200px;}
+
+
+
+/*===============o
+| 	TRANSFORMS   |
+o===============*/
+
+#shape1 {transform: rotateX(80deg) rotateY(20deg) translateZ(0px);}
+#shape2 {transform: rotateX(60deg) rotateY(40deg) translateZ(20px);}
+#shape3 {transform: rotateX(40deg) rotateY(60deg) translateZ(40px);}
+#shape4 {transform: rotateX(20deg) rotateY(80deg) translateZ(60px);}
+
+.shapeC1 {transform: rotateX(3820deg) rotateY(5380deg) translateZ(160px) !important;}
+.shapeC2 {}
+.shapeC3 {}
+.shapeC4 {}
+
+/*============o
+| 	BUTTONS   |
+o============*/
+
+#shiaLebouf {
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
