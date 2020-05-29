@@ -1,0 +1,14 @@
+body {
+  background-color: #131313;
+  color: #c3c3c3;
+}
+h1 {
+  text-align: center;
+}
+#logo img {
+  display: block;
+  width: 33%;
+  max-width: 200px;
+  margin: 120px auto 30px;
+  margin: 25vh auto 5vh;
+}
