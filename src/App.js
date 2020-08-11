@@ -13,7 +13,7 @@ function App() {
           <img src={logo} alt="bostwiek logo" />
         </div>
 
-        <h1>The future home of something quite nice...</h1>
+        <h1>Just a parked domain for now, but something cool soon...</h1>
 
       </div>
       <footer></footer>
