@@ -1,3 +1,3 @@
 # bostwiek.github.io
 
-### future home of a front-end portfolio
+### Empty repo right now, but maybe something cool later!
